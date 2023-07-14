@@ -1,0 +1,145 @@
+/* Reset default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-image: url('assets/McDonalds-Learning-Experience-3.16.20.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p, h3, h2, h1 {
+  color: #e03d3d;
+}
+
+.welcome{
+  text-align: center;
+  margin-top: 7%;
+}
+
+nav {
+  background-color: #f58142;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a.active {
+  background-color: #fff;
+  color: #f00; /* McDonald's red */
+  border-radius: 5px;
+}
+
+section {
+  padding: 50px;
+  margin-top: 10%;
+  text-align: center;
+  flex: 1;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+ul.team-list, ul.product-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 40px;
+  list-style: none;
+}
+
+ul.team-list li, ul.product-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+ul.team-list li:hover, ul.product-list li:hover {
+  transform: scale(1.05); /* Enlarge the div on hover */
+}
+
+ul.team-list .member-image, ul.product-list .product-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+ul.team-list .member-image img, ul.product-list .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul.team-list span {
+  margin-top: 10px;
+}
+
+.burger-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%; /* Adjust the margin as needed */
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Make the footer stay at the bottom */
+main {
+  flex: 1; /* Grow main content to fill remaining space */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 40px;
+  }
+
+  ul.team-list li, ul.product-list li {
+    width: 180px;
+  }
+}
